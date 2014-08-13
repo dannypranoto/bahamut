@@ -1,0 +1,22 @@
+<div id="login_register" class="container">
+  <h1><span class="line-center">USER LOGIN</span></h1>
+    <%= form_for(:session, url: sessions_path) do |f| %>
+        <div id="login_register" class="wrapper">
+            <%= f.label :email, "Email Address" %>
+            <%= f.text_field :email, class: "form-control" %>
+
+            <%= f.label :password, "Password" %>
+            <%= f.password_field :password, class: "form-control" %>
+
+          <br><%= f.submit "LOGIN", class: "button darkbrown" %>
+          <span class="right">Forgot Password?</span>
+        </div>
+    <% end %>
+
+  <h2><span class="line-center">Haven't Registered Yet?</span></h2>
+  <div id="login_register" class="bottom_wrapper">
+    <%= link_to "<button class=\"button darkbrown\">REGISTER</button>".html_safe, register_path, :method => "get" %>
+  </div>
+
+
+</div>

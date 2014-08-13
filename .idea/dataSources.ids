@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails bahamut: development" uuid="2552d9f0-5c53-421b-8a40-2bd4d07485ee">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails connect-rails: development" uuid="d3ef60d6-7bcd-4d2e-ab1b-8dc6a5d4bf85">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails connect-rails: test" uuid="5502aa52-d51a-49c0-83ab-2225df494085">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails connect-rails: production" uuid="c0fb00b3-10db-4954-b82b-c48d800d8b9d">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

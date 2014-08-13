@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bahamut</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="wrapper">
+      <header>
+        <div id="logo">
+          <%= image_tag "logo.png" %>
+        </div>
+          <% if logged_in? %>
+            <div id="menu">
+              <ul>
+                <li><%= link_to "DASHBOARD",       root_path %></li>
+                <li><%= link_to "TOP-UP",      about_path %></li>
+                <li><%= link_to "MY PROFILE",    pricing_path %></li>
+                <li><%= link_to "LOG OUT",    product_path %></li>
+              </ul>
+            </div>
+            <div id="login-register">
+
+            </div>
+          <% else %>
+            <div id="menu">
+              <ul>
+                <li><%= link_to "HOME",       root_path %></li>
+                <li><%= link_to "ABOUT",      about_path %></li>
+                <li><%= link_to "PRICING",    pricing_path %></li>
+                <li><%= link_to "PRODUCT",    product_path %></li>
+                <li><%= link_to "CONTACT",    contact_path %></li>
+              </ul>
+            </div>
+            <div id="login-register">
+              <%= link_to "<button class=\"button orange\">LOGIN</button>".html_safe, login_path, :method => "get" %>
+              <%= link_to "<button class=\"button darkbrown\">REGISTER</button>".html_safe, register_path, :method => "get" %>
+            </div>
+          <% end %>
+      </header>
+
+      <div id="content">
+        <%= yield %>
+      </div>
+
+      <footer>
+        (C)2014 Connect. All Rights Reserved.
+      </footer>
+    </div>
+</body>
+</html>

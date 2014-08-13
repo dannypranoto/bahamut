@@ -1,0 +1,165 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+$dark-brown:  #534741;
+$light-brown: #C2B59B;
+$orange:      #FBAF41;
+$dark:        #444444;
+$light:       #999999;
+$blue:        #2DB6CF;
+$green:       #46b98a;
+$white:       #FFFFFF;
+$screen-width: 1366px;
+$screen-height: 768px;
+
+@mixin align-vertical{
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Century Gothic";
+  min-width: 1024px;
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+header {
+  height: 75px;
+  width: $screen-width;
+  background: $dark-brown;
+  margin: 0;
+}
+
+#content {
+  width: $screen-width;
+  min-height: 500px;
+  background: $white;
+  padding: 20px 0;
+}
+
+footer {
+  background: $orange;
+  width: $screen-width;
+  height: 30px;
+  position: absolute;
+  padding: 10px 0;
+  bottom: 0;
+}
+
+footer:before {
+  @include align-vertical;
+}
+
+#logo {
+  height: 75px;
+  width: 25%;
+  margin: auto auto;
+  text-align: center;
+  float: left;
+}
+
+#logo:before {
+  @include align-vertical;
+}
+
+#menu {
+  height: 75px;
+  width: 50%;
+  text-align: center;
+  font-size: 21px;
+  float: left;
+}
+
+#menu ul{
+  height: 75px;
+  width: 50%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#menu li{
+  display: inline;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#menu a{
+  text-decoration: none;
+  color: $light-brown;
+}
+
+#menu a:hover{
+  color: $orange;
+}
+
+#login-register{
+  height: 75px;
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+#login-register:before {
+   @include align-vertical;
+ }
+
+.button {
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  text-transform: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 125px; /* auto */
+  height: 40px;
+  text-align: center; /* DELETE WHEN WIDTH AUTO */
+  &.orange {
+    background: none repeat scroll 0 0 $orange;
+    color: $dark-brown;
+    &:hover {
+      background: none repeat scroll 0 0 $green;
+      color: $white;
+    }
+  }
+  &.darkbrown {
+    background: none repeat scroll 0 0 $dark-brown;
+    color: $light-brown;
+    &:hover {
+      background: none repeat scroll 0 0 $light-brown;
+      color: $white;
+    }
+  }
+}

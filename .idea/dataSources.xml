@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2296488312">
+    <data-source source="LOCAL" name="Rails bahamut: development" uuid="2552d9f0-5c53-421b-8a40-2bd4d07485ee">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Sites\bahamut\db\development.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails connect-rails: development" uuid="d3ef60d6-7bcd-4d2e-ab1b-8dc6a5d4bf85">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/connect_development</jdbc-url>
+      <user-name>panggi</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails connect-rails: test" uuid="5502aa52-d51a-49c0-83ab-2225df494085">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/connect_test</jdbc-url>
+      <user-name>panggi</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails connect-rails: production" uuid="c0fb00b3-10db-4954-b82b-c48d800d8b9d">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/connect_production</jdbc-url>
+      <user-name>panggi</user-name>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails bahamut: test" uuid="e8c88593-24a6-4a68-b2ee-c413a3ee12cd">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:C:\Sites\bahamut\db\test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

@@ -1,0 +1,27 @@
+<div id="login_register" class="container">
+
+  <h1><span class="line-center">REGISTER NEW USER</span></h1>
+
+    <%= form_for @user do |f| %>
+      <div id="login_register" class="wrapper">
+        <%= f.label :name, "Full Name" %>
+        <%= f.text_field :name, class: "form-control" %>
+
+        <%= f.label :phone_number, "Phone Number" %>
+        <%= f.text_field :phone_number, class: "form-control" %>
+
+        <%= f.label :email, "Email Address" %>
+        <%= f.text_field :email, class: "form-control" %>
+
+        <%= f.label :password, "Password" %>
+        <%= f.password_field :password, class: "form-control" %>
+
+        <%= f.label :password_confirmation, "Confirm Password" %>
+        <%= f.password_field :password_confirmation, class: "form-control" %>
+
+        <p>By clicking <b>REGISTER</b> button, you have agree to our Terms and Condition</p>
+      </div>
+      <%= f.submit "REGISTER", class: "button darkbrown" %>
+    <% end %>
+
+</div>

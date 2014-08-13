@@ -1,0 +1,176 @@
+// Place all the styles related to the connect_pages controller here.
+// They will automatically be included in application.css.scss.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$dark-brown:  #534741;
+$light-brown: #C2B59B;
+$orange:      #FBAF41;
+
+@mixin align-vertical{
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+#login_register.container {
+    height: auto;
+    width: 400px;
+    background: $light-brown;
+    font-family: "Century Gothic";
+    text-align: center;
+    margin: 50px auto 90px;
+    padding: 20px 10px 30px;
+}
+
+#login_register.wrapper {
+    height: auto;
+    margin: 30px 30px;
+    padding: 10px 10px;
+    text-align: left;
+    font-size: 18px;
+    color: $dark-brown;
+}
+
+#login_register.bottom_wrapper {
+  height: auto;
+  margin: 10px auto 0;
+  padding: 10px 10px;
+}
+
+.line-center{
+  margin:0;
+  padding:0 10px;
+  background: $light-brown;
+  display:inline-block;
+}
+
+.right{
+  float: right;
+}
+
+#login_register h1 {
+    margin: 0 auto;
+    width: 350px;
+    font-size: 30px;
+    font-family: "Century Gothic";
+    color: $dark-brown;
+    text-align:center;
+    position:relative;
+    z-index:2;
+}
+
+#login_register h1:after{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  border-top:solid 2px $dark-brown;
+  z-index:-1;
+}
+
+#login_register h2 {
+  margin: 0 auto;
+  width: 350px;
+  font-size: 18px;
+  font-family: "Century Gothic";
+  font-weight: normal;
+  color: $dark-brown;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+
+#login_register h2:after{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  border-top:solid 2px $dark-brown;
+  z-index:-1;
+}
+
+#login_register p{
+  font-size: 15px;
+  color: $dark-brown;
+  text-align: justify;
+}
+
+#notification.wrapper {
+  width: 550px;
+  height: auto;
+  padding: 25px;
+  margin: 50px auto;
+}
+
+#notification.container {
+  background: $light-brown;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+}
+
+#notification h1 {
+  font-size: 24px;
+  color: $dark-brown;
+  font-weight: normal;
+}
+
+#notification p {
+  font-size: 18px;
+  color: $dark-brown;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+
+.form-control {
+  display: block;
+  width: 92%;
+  height: 24px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+  border-color: $orange;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $orange;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $orange;
+}
+.form-control::-moz-placeholder {
+  color: #777;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+  color: #777;
+}
+.form-control::-webkit-input-placeholder {
+  color: #777;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}
+textarea.form-control {
+  height: auto;
+}
+
+
+
