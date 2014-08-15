@@ -1,9 +1,11 @@
-<div id="login_register" class="container">
+<div id="login-register-form" class="container centered">
 
-  <h1><span class="line-center">REGISTER NEW USER</span></h1>
+  <h1 class="line-title"><span class="line-center">REGISTRATION</span></h1>
 
-    <%= form_for @user do |f| %>
-      <div id="login_register" class="wrapper">
+  <%= form_for @user do |f| %>
+      <div id="login-register-form" class="wrapper">
+        <%= render 'shared/error_messages' %>
+
         <%= f.label :name, "Full Name" %>
         <%= f.text_field :name, class: "form-control" %>
 
@@ -13,15 +15,18 @@
         <%= f.label :email, "Email Address" %>
         <%= f.text_field :email, class: "form-control" %>
 
+
         <%= f.label :password, "Password" %>
         <%= f.password_field :password, class: "form-control" %>
+
 
         <%= f.label :password_confirmation, "Confirm Password" %>
         <%= f.password_field :password_confirmation, class: "form-control" %>
 
+
         <p>By clicking <b>REGISTER</b> button, you have agree to our Terms and Condition</p>
       </div>
       <%= f.submit "REGISTER", class: "button darkbrown" %>
-    <% end %>
+  <% end %>
 
 </div>

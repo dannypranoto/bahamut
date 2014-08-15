@@ -6,106 +6,50 @@ $dark-brown:  #534741;
 $light-brown: #C2B59B;
 $orange:      #FBAF41;
 
-@mixin align-vertical{
-  content: ' ';
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
+/* Login and Register Form */
+#login-register-form.container {
+  height: auto;
+  width: 400px;
+  background: $light-brown;
+  color: $dark-brown;
+  text-align: center;
+  margin: 50px auto 100px;
+  padding: 30px 10px 30px;
 }
 
-#login_register.container {
-    height: auto;
-    width: 400px;
-    background: $light-brown;
-    font-family: "Century Gothic";
-    text-align: center;
-    margin: 50px auto 90px;
-    padding: 20px 10px 30px;
+#login-register-form.wrapper {
+  height: auto;
+  margin: 30px 30px;
+  text-align: left;
+  font-size: 18px;
+  color: $dark-brown;
 }
 
-#login_register.wrapper {
-    height: auto;
-    margin: 30px 30px;
-    padding: 10px 10px;
-    text-align: left;
-    font-size: 18px;
-    color: $dark-brown;
-}
-
-#login_register.bottom_wrapper {
+#login-register-form.bottom-wrapper {
   height: auto;
   margin: 10px auto 0;
   padding: 10px 10px;
 }
 
-.line-center{
-  margin:0;
-  padding:0 10px;
-  background: $light-brown;
-  display:inline-block;
-}
-
-.right{
-  float: right;
-}
-
-#login_register h1 {
-    margin: 0 auto;
-    width: 350px;
-    font-size: 30px;
-    font-family: "Century Gothic";
-    color: $dark-brown;
-    text-align:center;
-    position:relative;
-    z-index:2;
-}
-
-#login_register h1:after{
-  content:"";
-  position:absolute;
-  top:50%;
-  left:0;
-  right:0;
-  border-top:solid 2px $dark-brown;
-  z-index:-1;
-}
-
-#login_register h2 {
-  margin: 0 auto;
-  width: 350px;
-  font-size: 18px;
-  font-family: "Century Gothic";
+#login-register-form h2{
+  font-size: 21px;
   font-weight: normal;
-  color: $dark-brown;
-  text-align:center;
-  position:relative;
-  z-index:2;
 }
 
-#login_register h2:after{
-  content:"";
-  position:absolute;
-  top:50%;
-  left:0;
-  right:0;
-  border-top:solid 2px $dark-brown;
-  z-index:-1;
-}
-
-#login_register p{
+#login-register-form p{
   font-size: 15px;
-  color: $dark-brown;
   text-align: justify;
 }
 
-#notification.wrapper {
+/* Notification Style */
+#notification.container {
   width: 550px;
   height: auto;
   padding: 25px;
   margin: 50px auto;
 }
 
-#notification.container {
+#notification.wrapper {
   background: $light-brown;
   width: 500px;
   height: auto;
@@ -116,6 +60,7 @@ $orange:      #FBAF41;
   font-size: 24px;
   color: $dark-brown;
   font-weight: normal;
+  text-align: left;
 }
 
 #notification p {
@@ -126,6 +71,44 @@ $orange:      #FBAF41;
   padding: 0;
 }
 
+/* Title Horizontal Line Style */
+.line-center{
+  padding:0 10px;
+  background: $light-brown;
+  display:inline-block;
+}
+
+.line-title {
+  margin: 0 auto;
+  width: 350px;
+  text-align:center;
+  position:relative;
+  z-index:2;
+}
+
+.line-title:after{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  border-top:solid 2px $dark-brown;
+  z-index:-1;
+}
+
+/* Table Style */
+.table {
+  display: table;
+  width: 100%;
+}
+
+.column {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Text Box Style */
 .form-control {
   display: block;
   width: 92%;
@@ -171,6 +154,3 @@ fieldset[disabled] .form-control {
 textarea.form-control {
   height: auto;
 }
-
-
-

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/bahamut.iml" filepath="$PROJECT_DIR$/.idea/bahamut.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../connect-rails/.idea/connect-rails.iml" filepath="$PROJECT_DIR$/../connect-rails/.idea/connect-rails.iml" />
     </modules>
   </component>
 </project>

@@ -1,22 +1,26 @@
-<div id="login_register" class="container">
-  <h1><span class="line-center">USER LOGIN</span></h1>
-    <%= form_for(:session, url: sessions_path) do |f| %>
-        <div id="login_register" class="wrapper">
-            <%= f.label :email, "Email Address" %>
-            <%= f.text_field :email, class: "form-control" %>
+<div id="login-register-form" class="container centered">
 
-            <%= f.label :password, "Password" %>
-            <%= f.password_field :password, class: "form-control" %>
+  <h1 class="line-title"><span class="line-center">USER LOGIN</span></h1>
+  <%= form_for(:session, url: sessions_path) do |f| %>
+      <div id="login-register-form" class="wrapper">
+        <%= f.label :email, "Email Address" %>
+        <%= f.text_field :email, class: "form-control" %>
 
-          <br><%= f.submit "LOGIN", class: "button darkbrown" %>
-          <span class="right">Forgot Password?</span>
+        <%= f.label :password, "Password" %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+      <div id="login-register-form" class="wrapper">
+        <div class="table">
+          <div class="column"><%= f.submit "LOGIN", class: "button darkbrown" %></div>
+          <div class="column">Forgot Password?</div>
         </div>
-    <% end %>
+      </div>
+  <% end %>
 
-  <h2><span class="line-center">Haven't Registered Yet?</span></h2>
-  <div id="login_register" class="bottom_wrapper">
+  <h2 class="line-title"><span class="line-center">Haven't Registered Yet?</span></h2>
+
+  <div id="login-register-form" class="bottom-wrapper">
     <%= link_to "<button class=\"button darkbrown\">REGISTER</button>".html_safe, register_path, :method => "get" %>
   </div>
-
 
 </div>

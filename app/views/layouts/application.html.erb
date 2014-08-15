@@ -7,47 +7,50 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <div id="wrapper">
-      <header>
-        <div id="logo">
-          <%= image_tag "logo.png" %>
-        </div>
-          <% if logged_in? %>
-            <div id="menu">
-              <ul>
-                <li><%= link_to "DASHBOARD",       root_path %></li>
-                <li><%= link_to "TOP-UP",      about_path %></li>
-                <li><%= link_to "MY PROFILE",    pricing_path %></li>
-                <li><%= link_to "LOG OUT",    product_path %></li>
-              </ul>
-            </div>
-            <div id="login-register">
 
-            </div>
-          <% else %>
-            <div id="menu">
-              <ul>
-                <li><%= link_to "HOME",       root_path %></li>
-                <li><%= link_to "ABOUT",      about_path %></li>
-                <li><%= link_to "PRICING",    pricing_path %></li>
-                <li><%= link_to "PRODUCT",    product_path %></li>
-                <li><%= link_to "CONTACT",    contact_path %></li>
-              </ul>
-            </div>
-            <div id="login-register">
-              <%= link_to "<button class=\"button orange\">LOGIN</button>".html_safe, login_path, :method => "get" %>
-              <%= link_to "<button class=\"button darkbrown\">REGISTER</button>".html_safe, register_path, :method => "get" %>
-            </div>
-          <% end %>
-      </header>
+<div id="body-wrapper">
 
-      <div id="content">
-        <%= yield %>
-      </div>
-
-      <footer>
-        (C)2014 Connect. All Rights Reserved.
-      </footer>
+  <header>
+    <div id="logo-wrapper" class="block">
+      <%= image_tag "logo.png", class: 'centered' %>
     </div>
+    <% if logged_in? %>
+        <div id="menu-wrapper" class="block">
+          <ul class="centered">
+            <li><%= link_to "DASHBOARD",       root_path %></li>
+            <li><%= link_to "TOP-UP",      top_up_path %></li>
+            <li><%= link_to "MY PROFILE",    profile_path %></li>
+            <li><%= link_to "LOG OUT",    logout_path, method: "delete" %></li>
+          </ul>
+        </div>
+        <div id="login-register">
+
+        </div>
+    <% else %>
+        <div id="menu-wrapper" class="block">
+          <ul class="centered">
+            <li><%= link_to "HOME",       root_path %></li>
+            <li><%= link_to "ABOUT",      about_path %></li>
+            <li><%= link_to "PRICING",    pricing_path %></li>
+            <li><%= link_to "PRODUCT",    product_path %></li>
+            <li><%= link_to "CONTACT",    contact_path %></li>
+          </ul>
+        </div>
+        <div id="login-register-wrapper" class="block">
+          <%= link_to "<button class=\"button orange\">LOGIN</button>".html_safe, login_path, :method => "get", class: 'centered' %>
+          <%= link_to "<button class=\"button darkbrown\">REGISTER</button>".html_safe, register_path, :method => "get", class: 'centered' %>
+        </div>
+    <% end %>
+  </header>
+
+  <div id="content" class="block">
+    <%= yield %>
+  </div>
+
+  <footer class="block">
+    <span class="centered">(C)2014 Connect. All Rights Reserved.</span>
+  </footer>
+
+</div>
 </body>
 </html>

@@ -25,110 +25,101 @@ $white:       #FFFFFF;
 $screen-width: 1366px;
 $screen-height: 768px;
 
-@mixin align-vertical{
-  content: ' ';
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-}
-
+/* Html and Body Style */
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   font-family: "Century Gothic";
-  min-width: 1024px;
+  min-width: 1366px;
+
 }
 
-#wrapper {
+#body-wrapper {
   min-height: 100%;
   position: relative;
 }
 
+/* Header Style */
 header {
   height: 75px;
-  width: $screen-width;
+  width: 100%;
   background: $dark-brown;
-  margin: 0;
 }
 
-#content {
-  width: $screen-width;
-  min-height: 500px;
-  background: $white;
-  padding: 20px 0;
-}
-
-footer {
-  background: $orange;
-  width: $screen-width;
-  height: 30px;
-  position: absolute;
-  padding: 10px 0;
-  bottom: 0;
-}
-
-footer:before {
-  @include align-vertical;
-}
-
-#logo {
+#logo-wrapper {
   height: 75px;
   width: 25%;
-  margin: auto auto;
-  text-align: center;
   float: left;
 }
 
-#logo:before {
-  @include align-vertical;
-}
-
-#menu {
+#menu-wrapper {
   height: 75px;
   width: 50%;
-  text-align: center;
-  font-size: 21px;
   float: left;
 }
 
-#menu ul{
-  height: 75px;
-  width: 50%;
-  padding: 0;
-  margin: 0;
+#menu-wrapper ul{
+  width: 90%;
   list-style: none;
-  display: table-cell;
-  vertical-align: middle;
+  font-size: 21px;
 }
 
-#menu li{
+#menu-wrapper li{
   display: inline;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 15px;
 }
 
-#menu a{
+#menu-wrapper a{
   text-decoration: none;
   color: $light-brown;
 }
 
-#menu a:hover{
+#menu-wrapper a:hover{
   color: $orange;
 }
 
-#login-register{
+#login-register-wrapper{
   height: 75px;
   width: 25%;
   float: left;
+}
+
+/* Content Style */
+#content {
+  width: 100%;
+  min-height: 535px;
+}
+
+/* Footer Style */
+footer {
+  background: $orange;
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+}
+
+/* Centered object inside div vertically */
+.block { //class for parent
   text-align: center;
 }
 
-#login-register:before {
-   @include align-vertical;
- }
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
 
+.centered { //class for object(child)
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Button Style */
 .button {
   border: 0 none;
   border-radius: 2px 2px 2px 2px;
@@ -158,7 +149,7 @@ footer:before {
     background: none repeat scroll 0 0 $dark-brown;
     color: $light-brown;
     &:hover {
-      background: none repeat scroll 0 0 $light-brown;
+      background: none repeat scroll 0 0 $blue;
       color: $white;
     }
   }

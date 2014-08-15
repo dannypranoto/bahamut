@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   match '/dashboard', to: 'sessions#dashboard', via: 'get'
   match '/top_up', to: 'sessions#top_up', via: 'get'
   match '/profile', to: 'sessions#profile', via: 'get'
-  match '/logout', to: 'sessions#logout', via: 'delete'
+  match '/logout', to: 'sessions#destroy', via: 'delete'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

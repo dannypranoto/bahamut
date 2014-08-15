@@ -9,7 +9,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to register_success_path
     else
-      render 'new'
+      render 'register'
     end
   end
 
