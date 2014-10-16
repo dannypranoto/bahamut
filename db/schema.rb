@@ -22,6 +22,6 @@ ActiveRecord::Schema.define(version: 20140812072005) do
     t.string   "phone_number"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
