@@ -29,3 +29,8 @@ config/secrets.yml
 /vendor/assets/bower_components
 *.bowerrc
 bower.json
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+.idea
