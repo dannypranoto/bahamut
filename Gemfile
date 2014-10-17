@@ -27,6 +27,9 @@ gem 'bcrypt-ruby', '~> 3.1.2', :require => 'bcrypt'
 gem 'pry'
 
 gem 'mysql2'
+
+gem 'devise'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

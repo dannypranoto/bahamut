@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :customers
   resources :users
   resources :sessions, only: [:login, :create, :destroy, :dashboard, :top_up, :profile]
 

@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Bahamut</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
@@ -17,10 +17,10 @@
     <% if false %>
         <div id="menu-wrapper" class="block">
           <ul class="centered">
-            <li><%= link_to "DASHBOARD",       root_path %></li>
-            <li><%= link_to "TOP-UP",      top_up_path %></li>
-            <li><%= link_to "MY PROFILE",    profile_path %></li>
-            <li><%= link_to "LOG OUT",    logout_path, method: "delete" %></li>
+            <li><%= link_to "DASHBOARD", root_path %></li>
+            <li><%= link_to "TOP-UP", top_up_path %></li>
+            <li><%= link_to "MY PROFILE", profile_path %></li>
+            <li><%= link_to "LOG OUT", logout_path, method: "delete" %></li>
           </ul>
         </div>
         <div id="login-register">
@@ -29,11 +29,11 @@
     <% else %>
         <div id="menu-wrapper" class="block">
           <ul class="centered">
-            <li><%= link_to "HOME",       root_path %></li>
-            <li><%= link_to "ABOUT",      about_path %></li>
-            <li><%= link_to "PRICING",    pricing_path %></li>
-            <li><%= link_to "PRODUCT",    product_path %></li>
-            <li><%= link_to "CONTACT",    contact_path %></li>
+            <li><%= link_to "HOME", root_path %></li>
+            <li><%= link_to "ABOUT", about_path %></li>
+            <li><%= link_to "PRICING", pricing_path %></li>
+            <li><%= link_to "PRODUCT", product_path %></li>
+            <li><%= link_to "CONTACT", contact_path %></li>
           </ul>
         </div>
         <div id="login-register-wrapper" class="block">
@@ -44,6 +44,8 @@
   </header>
 
   <div id="content" class="block">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </div>
 
