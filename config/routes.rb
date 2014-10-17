@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :customers
-  resources :users
+  devise_for :customers, controllers: { :registrations => 'customers/registrations'}
+
   resources :sessions, only: [:login, :create, :destroy, :dashboard, :top_up, :profile]
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   match '/top_up', to: 'sessions#top_up', via: 'get'
   match '/profile', to: 'sessions#profile', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'delete'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,18 +1,30 @@
-<h2>Sign up</h2>
+<div id="login-register-form" class="container centered">
+  
+  <h1 class="line-title"><span class="line-center">REGISTRATION</span></h1>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, autofocus: true %></div>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
+    <div id="login-register-form" class="wrapper">
+      
+      <div><%= f.label :display_name %><br />
+      <%= f.text_field :display_name,  autofocus: true ,class: "form-control"%></div>
 
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+      <div><%= f.label :email %><br />
+      <%= f.email_field :email, class: "form-control"%></div>
 
-  <div><%= f.submit "Sign up" %></div>
-<% end %>
+      <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+        <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
 
-<%= render "customers/shared/links" %>
+      <div><%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" , class: "form-control"%></div>
+
+      <p>By clicking <b>REGISTER</b> button, you have agree to our Terms and Condition</p>
+    </div>
+
+    <div><%= f.submit "Sign up", class: "button darkbrown" %></div>
+  <% end %>
+
+  <%#= render "customers/shared/links" %>
+</div>
