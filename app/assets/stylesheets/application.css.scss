@@ -25,6 +25,11 @@ $white:       #FFFFFF;
 $screen-width: 1366px;
 $screen-height: 768px;
 
+@font-face{
+   font-family: "Century Gothic";
+   src: url(/assets/gothic.ttf) format("truetype");
+}
+
 /* Html and Body Style */
 html,
 body {
@@ -32,6 +37,7 @@ body {
   padding: 0;
   height: 100%;
   font-family: "Century Gothic";
+  
   min-width: 1366px;
 
 }

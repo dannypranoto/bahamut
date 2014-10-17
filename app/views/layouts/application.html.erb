@@ -37,8 +37,8 @@
           </ul>
         </div>
         <div id="login-register-wrapper" class="block">
-          <%= link_to "<button class=\"button orange\">LOGIN</button>".html_safe, login_path, :method => "get", class: 'centered' %>
-          <%= link_to "<button class=\"button darkbrown\">REGISTER</button>".html_safe, register_path, :method => "get", class: 'centered' %>
+          <%= link_to "<button class=\"button orange\">LOGIN</button>".html_safe, new_customer_session_path, :method => "get", class: 'centered' %>
+          <%= link_to "<button class=\"button darkbrown\">REGISTER</button>".html_safe, new_customer_registration_path, :method => "get", class: 'centered' %>
         </div>
     <% end %>
   </header>

@@ -40,7 +40,7 @@ class Customers::RegistrationsController < Devise::RegistrationsController
 
   # You can put the params you want to permit in the empty array.
   def configure_sign_up_params
-     devise_parameter_sanitizer.for(:sign_up) << :display_name
+     devise_parameter_sanitizer.for(:sign_up) << :customer_name
   end
 
   # You can put the params you want to permit in the empty array.
