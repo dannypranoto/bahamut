@@ -14,13 +14,13 @@
     <div id="logo-wrapper" class="block">
       <%= image_tag "logo.png", class: 'centered' %>
     </div>
-    <% if false %>
+    <% if customer_signed_in? %>
         <div id="menu-wrapper" class="block">
           <ul class="centered">
             <li><%= link_to "DASHBOARD", root_path %></li>
             <li><%= link_to "TOP-UP", top_up_path %></li>
             <li><%= link_to "MY PROFILE", profile_path %></li>
-            <li><%= link_to "LOG OUT", logout_path, method: "delete" %></li>
+            <li><%= link_to "LOG OUT", destroy_customer_session_path, method: "delete" %></li>
           </ul>
         </div>
         <div id="login-register">
