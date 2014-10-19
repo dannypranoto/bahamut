@@ -15,19 +15,19 @@
       <%= image_tag "logo.png", class: 'centered' %>
     </div>
     <% if customer_signed_in? %>
-        <div id="menu-wrapper" class="block">
+        <div id="menu-wrapper-customer" class="block menu-wrapper" >
           <ul class="centered">
-            <li><%= link_to "DASHBOARD", root_path %></li>
-            <li><%= link_to "TOP-UP", top_up_path %></li>
-            <li><%= link_to "MY PROFILE", edit_customer_registration_path %></li>
+            <li><%= link_to "DASHBOARD", dashboard_path %></li>
+            <li><%= link_to "TRANSACTION", top_up_path %></li>
+            <li><%= link_to "MY PROFILE", profile_path %></li>
             <li><%= link_to "LOG OUT", destroy_customer_session_path, method: "delete" %></li>
           </ul>
         </div>
-        <div id="login-register">
-
-        </div>
+          <div id="welcome-customer" class="block">
+            <font color="#C2B59B">Welcome, </font> <%=  current_customer.customer_name %>
+          </div>
     <% else %>
-        <div id="menu-wrapper" class="block">
+        <div id="menu-wrapper-home" class="block menu-wrapper">
           <ul class="centered">
             <li><%= link_to "HOME", root_path %></li>
             <li><%= link_to "ABOUT", about_path %></li>
@@ -50,7 +50,7 @@
   </div>
 
   <footer class="block">
-    <span class="centered">(C)2014 Connect. All Rights Reserved.</span>
+    <span class="centered">&copy; 2014 Connect. All Rights Reserved.</span>
   </footer>
 
 </div>

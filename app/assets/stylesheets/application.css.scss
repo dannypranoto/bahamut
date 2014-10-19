@@ -22,8 +22,7 @@ $light:       #999999;
 $blue:        #2DB6CF;
 $green:       #46b98a;
 $white:       #FFFFFF;
-$screen-width: 1366px;
-$screen-height: 768px;
+
 
 @font-face{
    font-family: "Century Gothic";
@@ -35,74 +34,75 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
+  min-width: 1024px;
+  height: auto ;  
   font-family: "Century Gothic";
-  
-  min-width: 1366px;
-
 }
 
 #body-wrapper {
-  min-height: 100%;
   position: relative;
 }
 
 /* Header Style */
 header {
-  height: 75px;
-  width: 100%;
+  height: 60px;
   background: $dark-brown;
 }
 
 #logo-wrapper {
-  height: 75px;
-  width: 25%;
+  height: 60px;
+  width: 21%;
   float: left;
 }
 
-#menu-wrapper {
-  height: 75px;
-  width: 50%;
+#menu-wrapper-home {
+  height: 60px;
+  width: 53%;
   float: left;
 }
 
-#menu-wrapper ul{
-  width: 90%;
+#menu-wrapper-customer {
+  height: 60px;
+  width: 56%;
+  float: left;
+}
+
+.menu-wrapper ul{
   list-style: none;
-  font-size: 21px;
+  font-size: 20px;
 }
 
-#menu-wrapper li{
+.menu-wrapper li{
   display: inline;
-  padding: 0 15px;
+  padding: 0 12px;
 }
 
-#menu-wrapper a{
+.menu-wrapper a{
   text-decoration: none;
   color: $light-brown;
 }
 
-#menu-wrapper a:hover{
+.menu-wrapper a:hover{
   color: $orange;
 }
 
 #login-register-wrapper{
-  height: 75px;
-  width: 25%;
+  height: 60px;
+  width: 26%;
   float: left;
 }
 
 /* Content Style */
 #content {
-  width: 100%;
-  min-height: 535px;
+  width: 1366;
+  min-height: 620px;
 }
 
 /* Footer Style */
 footer {
   background: $orange;
   width: 100%;
-  height: 50px;
+  height: 40px;
   position: absolute;
   bottom: 0;
 }
@@ -121,8 +121,10 @@ footer {
 }
 
 .centered { //class for object(child)
+  margin: auto;
   display: inline-block;
   vertical-align: middle;
+  padding-left: 0px;
 }
 
 /* Button Style */
@@ -131,7 +133,7 @@ footer {
   border-radius: 2px 2px 2px 2px;
   cursor: pointer;
   display: inline-block;
-  font-size: 18px;
+  font-size: 17px;
   font-weight: bold;
   line-height: 20px;
   text-transform: none;
@@ -140,8 +142,8 @@ footer {
   transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
-  width: 125px; /* auto */
-  height: 40px;
+  width: 120px; /* auto */
+  height: 35px;
   text-align: center; /* DELETE WHEN WIDTH AUTO */
   &.orange {
     background: none repeat scroll 0 0 $orange;
