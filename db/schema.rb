@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141017161402) do
+ActiveRecord::Schema.define(version: 20141019065156) do
 
   create_table "customers", force: true do |t|
     t.string   "email",                  default: "",    null: false
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20141017161402) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "customer_name",                          null: false
+    t.string   "username",                               null: false
     t.integer  "balance",                default: 0
     t.boolean  "status_customer",        default: true
     t.boolean  "status_increase_limit",  default: false
@@ -39,5 +39,6 @@ ActiveRecord::Schema.define(version: 20141017161402) do
   add_index "customers", ["confirmation_token"], name: "index_customers_on_confirmation_token", unique: true, using: :btree
   add_index "customers", ["email"], name: "index_customers_on_email", unique: true, using: :btree
   add_index "customers", ["reset_password_token"], name: "index_customers_on_reset_password_token", unique: true, using: :btree
+  add_index "customers", ["username"], name: "index_customers_on_username", unique: true, using: :btree
 
 end
