@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20141017161402) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "username",                               null: false
+    t.string   "customer_name",                          null: false
     t.integer  "balance",                default: 0
     t.boolean  "status_customer",        default: true
     t.boolean  "status_increase_limit",  default: false
