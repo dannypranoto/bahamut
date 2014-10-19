@@ -1,0 +1,10 @@
+<%= form_tag do %>
+
+	<div><%= label_tag :email %><br />
+	<%= text_field :transfer, :email%></div>
+
+	<div><%= label_tag :nominal %><br />
+	<%= text_field :transfer, :nominal %></div>
+
+	<div><%= submit_tag "Transfer" %></div>
+<% end %>

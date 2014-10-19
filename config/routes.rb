@@ -20,7 +20,12 @@ Rails.application.routes.draw do
   match '/profile', to: 'sessions#profile', via: 'get'
   match '/logout', to: 'sessions#destroy', via: 'delete'
 
-
+  resources :customers do
+    collection do
+      get 'transfer'
+      post 'transfer'
+    end
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
