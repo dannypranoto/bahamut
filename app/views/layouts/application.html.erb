@@ -19,12 +19,12 @@
           <ul class="centered">
             <li><%= link_to "DASHBOARD", dashboard_path %></li>
             <li><%= link_to "TRANSACTION", top_up_path %></li>
-            <li><%= link_to "MY PROFILE", profile_path %></li>
+            <li><%= link_to "MY PROFILE", edit_customer_registration_path %></li>
             <li><%= link_to "LOG OUT", destroy_customer_session_path, method: "delete" %></li>
           </ul>
         </div>
           <div id="welcome-customer" class="block">
-            <font color="#C2B59B">Welcome, </font> <%=  current_customer.customer_name %>
+            <font color="#C2B59B">Welcome, </font> <%=  current_customer.username %>
           </div>
     <% else %>
         <div id="menu-wrapper-home" class="block menu-wrapper">
