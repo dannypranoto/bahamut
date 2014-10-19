@@ -30,6 +30,8 @@ gem 'mysql2'
 
 gem 'devise'
 
+gem 'debugger'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
