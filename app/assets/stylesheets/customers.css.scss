@@ -37,12 +37,18 @@ $white:       #FFFFFF;
   text-align:right;
 }
 
+#horizontal-line {
+  float:left;
+  margin-left:30px;
+}
+
 #currency {
   font-size: 30px;
   color: $orange;
 }
 
 .dashboard-table {
+  float: left;
   margin-top:20px;
   padding:0px;
   width:100%;
