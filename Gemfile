@@ -30,6 +30,11 @@ gem 'mysql2'
 
 gem 'devise'
 
+gem 'excon'
+gem 'multi_json'
+
+gem 'rails_config'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
@@ -41,4 +46,3 @@ gem 'devise'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
-

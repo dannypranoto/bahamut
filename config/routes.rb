@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       post 'transfer'
       get 'topup'
       post 'topup'
+      get 'topup_success'
     end
   end
 
