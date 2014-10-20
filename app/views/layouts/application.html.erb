@@ -15,7 +15,7 @@
       <%= image_tag "logo.png", class: 'centered' %>
     </div>
     <% if customer_signed_in? %>
-        <div id="menu-wrapper-customer" class="block menu-wrapper" >
+        <div id="customer" class="block menu-wrapper" >
           <ul class="centered">
             <li><%= link_to "DASHBOARD", dashboard_customers_path %></li>
             <li><%= link_to "TRANSACTION", transaction_customers_path %></li>
@@ -27,7 +27,7 @@
             <font color="#C2B59B">Welcome, </font> <%=  current_customer.username %>
           </div>
     <% else %>
-        <div id="menu-wrapper-home" class="block menu-wrapper">
+        <div id="home" class="block menu-wrapper">
           <ul class="centered">
             <li><%= link_to "HOME", root_path %></li>
             <li><%= link_to "ABOUT", about_path %></li>

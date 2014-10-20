@@ -19,23 +19,33 @@ $white:        #FFFFFF;
   text-overflow: ellipsis;
 }
 
-#dashboard-profile-title {
-  font-size: 40px;
-  color: $dark-brown;
-  float: left;
-  margin-top: -13px;
-  margin-left: 50px;
-  height: 75px;
-  vertical-align: middle;
+#header-wrapper {
+  margin: 0;
+  height: 80px;
+  padding: 0 50px;
 }
 
-#dashboard-balance {
-  margin-top: -20px;
+.title {
+  font-size: 40px;
+  color: $dark-brown;
+  text-align: left !important;
+  float: left;
+  line-height: 80px;
+  width: 50%;
+}
+
+.balance {
   font-size: 15px;
   color: $dark-brown;
-  float: right;
-  margin-right: 50px;
+  float: left;
   text-align:right;
+  height: 100%;
+  width: 50%;
+}
+
+#currency {
+  font-size: 30px;
+  color: $orange;
 }
 
 #horizontal-line-dashboard {
@@ -49,10 +59,6 @@ $white:        #FFFFFF;
   margin-top:0px;
 }
 
-#currency {
-  font-size: 30px;
-  color: $orange;
-}
 
 .dashboard-table {
   float: left;
