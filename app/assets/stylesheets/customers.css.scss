@@ -179,43 +179,6 @@ $white:        #FFFFFF;
   }
 }
 
-.button-profile {
-  float: right;
-  border: 0 none;
-  border-radius: 2px 2px 2px 2px;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 20px;
-  text-transform: none;
-  margin-left: 5px;
-  transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.3s ease 0s;
-  width: 165px; /* auto */
-  height: 35px;
-  text-align: center; /* DELETE WHEN WIDTH AUTO */
-  &.orange {
-    margin-right: 5px;
-    background: none repeat scroll 0 0 $orange;
-    color: $dark-brown;
-    &:hover {
-      background: none repeat scroll 0 0 $green;
-      color: $white;
-    }
-  }
-  &.darkbrown {
-    margin-right: 70px;
-    background: none repeat scroll 0 0 $dark-brown;
-    color: $light-brown;
-    &:hover {
-      background: none repeat scroll 0 0 $blue;
-      color: $white;
-    }
-  }
-}
-
 #profile {
   float:left;;
   margin-left:50px;
@@ -238,7 +201,35 @@ $white:        #FFFFFF;
 #change-password-box {
   float: right;
   background-color : $light-brown;
-  border :0px;
-  height : 300px;
-  width : 400px;
+  border : 0px;
+  height : 380px;
+  width : 390px;
+  margin-top: 30px;
+  margin-right: 100px;
 } 
+
+#change-password-form {
+  margin: 30px;
+  width: 330px;
+  text-align: left;
+  font-size: 18px;
+  color: $dark-brown;
+}
+
+#close-account-box {
+  float: right;
+  background-color : $light-brown;
+  border : 0px;
+  height : 600px;
+  width : 390px;
+  margin-top: 30px;
+  margin-right: 100px;
+} 
+
+#close-account-form {
+  margin: 30px;
+  width: 330px;
+  text-align: left;
+  font-size: 18px;
+  color: $dark-brown;
+}

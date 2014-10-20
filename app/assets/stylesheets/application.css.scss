@@ -142,10 +142,10 @@ footer {
   transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
-  width: 120px; /* auto */
-  height: 35px;
-  text-align: center; /* DELETE WHEN WIDTH AUTO */
+  text-align: center;
   &.orange {
+    width: 120px;
+    height: 35px;
     background: none repeat scroll 0 0 $orange;
     color: $dark-brown;
     &:hover {
@@ -154,6 +154,43 @@ footer {
     }
   }
   &.darkbrown {
+    width: 120px;
+    height: 35px;
+    background: none repeat scroll 0 0 $dark-brown;
+    color: $light-brown;
+    &:hover {
+      background: none repeat scroll 0 0 $blue;
+      color: $white;
+    }
+  }
+  &.orange-profile {
+    width: 165px;
+    height: 35px;
+    float: right;
+    margin-right: 70px;  
+    background: none repeat scroll 0 0 $orange;
+    color: $dark-brown;
+    &:hover {
+      background: none repeat scroll 0 0 $green;
+      color: $white;
+    }
+  }
+  &.lightbrown-profile {
+    width: 165px;
+    height: 35px;
+    float: right;
+    margin-right: 5px;
+    background: none repeat scroll 0 0 $light-brown;
+    color: $dark-brown;
+    &:hover {
+      background: none repeat scroll 0 0 $blue;
+      color: $white;
+    }
+  }
+  &.darkbrown-close-account {
+    width: 165px;
+    height: 35px;
+    margin-top: 10px;
     background: none repeat scroll 0 0 $dark-brown;
     color: $light-brown;
     &:hover {
