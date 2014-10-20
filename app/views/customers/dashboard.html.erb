@@ -1,10 +1,10 @@
-<div id="dashboard-title">
+<div id="dashboard-profile-title">
 	DASHBOARD
 </div>
 <div id="dashboard-balance">
 	Balance<br/>
 	<div id="currency">
-		<%= number_to_currency(current_customer.balance, unit: "Rp ", separator: ",", delimiter: "") %>
+		<%= number_to_currency(current_customer.balance, unit: "Rp ", separator: ",", delimiter: ".") %>
 	</div>
 	from the limit of 
 	<% if(current_customer.status_increase_limit) %>
@@ -13,7 +13,7 @@
     	Rp 1.000.000,00
 	<% end %>
 </div>
-<hr id="horizontal-line" noshade size=1 width=95% />
+<hr id="horizontal-line-dashboard" noshade size=1 width=95% />
 <div class="dashboard-table">
     <table align="center">
         <tr>

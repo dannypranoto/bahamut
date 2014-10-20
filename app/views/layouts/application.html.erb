@@ -17,8 +17,8 @@
     <% if customer_signed_in? %>
         <div id="menu-wrapper-customer" class="block menu-wrapper" >
           <ul class="centered">
-            <li><%= link_to "DASHBOARD", dashboard_path %></li>
-            <li><%= link_to "TRANSACTION", top_up_path %></li>
+            <li><%= link_to "DASHBOARD", dashboard_customers_path %></li>
+            <li><%= link_to "TRANSACTION", transaction_customers_path %></li>
             <li><%= link_to "MY PROFILE", edit_customer_registration_path %></li>
             <li><%= link_to "LOG OUT", destroy_customer_session_path, method: "delete" %></li>
           </ul>

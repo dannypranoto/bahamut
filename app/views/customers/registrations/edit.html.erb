@@ -1,22 +1,48 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div id="dashboard-profile-title">
+  MY PROFILE
+</div>
+<%= link_to "<button class=\"button-profile darkbrown\">change password</button>".html_safe %>
+<%= link_to "<button class=\"button-profile orange\">close account</button>".html_safe %>
+<hr id="horizontal-line-profile" noshade size=1 width=95% />
+<div id="profile">
+  <div id="header-profile">
+    Username
+  </div>
+  <div id="content-profile">
+    <%=  current_customer.username %>
+  </div>
+  <div id="header-profile">
+    Email
+  </div>
+  <div id="content-profile">
+    <%=  current_customer.email %>
+  </div>
+  <div id="header-profile">
+    Balance
+  </div>
+  <div id="content-profile">
+    <%= number_to_currency(current_customer.balance, unit: "Rp ", separator: ",", delimiter: ".") %>
+  </div>
+</div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+<div id="change-password-box">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <%= devise_error_messages! %>
 
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+      <%= f.password_field :current_password, autocomplete: "off" %></div>
+
+    <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+      <%= f.password_field :password, autocomplete: "off" %></div>
+
+    <div><%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+    <div><%= f.submit "Update" %></div>
   <% end %>
+</div>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %></div>
-
-  <div><%= f.submit "Update" %></div>
-<% end %>
-
-<%= link_to "Back", :back %>

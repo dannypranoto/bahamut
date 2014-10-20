@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   devise_for :customers, controllers: { :registrations => 'customers/registrations'}
 
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -12,16 +11,11 @@ Rails.application.routes.draw do
   match '/contact', to: 'connect_pages#contact', via: 'get'
   match '/pricing', to: 'connect_pages#pricing', via: 'get'
   match '/product', to: 'connect_pages#product', via: 'get'
-  match '/register', to: 'users#register', via: 'get'
-  match '/register_success', to: 'users#register_success', via: 'get'
-  match '/login', to: 'sessions#login', via: 'get'
-  match '/dashboard', to: 'sessions#dashboard', via: 'get'
-  match '/top_up', to: 'sessions#top_up', via: 'get'
-  match '/profile', to: 'sessions#profile', via: 'get'
-  match '/logout', to: 'sessions#destroy', via: 'delete'
 
   resources :customers do
     collection do
+      get 'dashboard'
+      get 'transaction'
       get 'transfer'
       post 'transfer'
     end

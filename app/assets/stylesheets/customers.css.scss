@@ -1,11 +1,12 @@
-$dark-brown:  #534741;
-$light-brown: #C2B59B;
-$orange:      #FBAF41;
-$dark:        #444444;
-$light:       #999999;
-$blue:        #2DB6CF;
-$green:       #46b98a;
-$white:       #FFFFFF;
+$dark-brown:   #534741;
+$light-brown:  #C2B59B;
+$lighter-brown:#CEB1A6;
+$orange:       #FBAF41;
+$dark:         #444444;
+$light:        #999999;
+$blue:         #2DB6CF;
+$green:        #46b98a;
+$white:        #FFFFFF;
 
 #welcome-customer {
   font-size: 18px;
@@ -18,7 +19,7 @@ $white:       #FFFFFF;
   text-overflow: ellipsis;
 }
 
-#dashboard-title {
+#dashboard-profile-title {
   font-size: 40px;
   color: $dark-brown;
   float: left;
@@ -37,9 +38,15 @@ $white:       #FFFFFF;
   text-align:right;
 }
 
-#horizontal-line {
+#horizontal-line-dashboard {
   float:left;
   margin-left:30px;
+}
+
+#horizontal-line-profile {
+  float:left;
+  margin-left:30px;
+  margin-top:0px;
 }
 
 #currency {
@@ -78,11 +85,11 @@ $white:       #FFFFFF;
 }
 
 .dashboard-table tr:nth-child(odd){
-  background-color:#c2b59b;
+  background-color:$lighter-brown;
 }
 
 .dashboard-table tr:nth-child(even){
-  background-color:#ffffff;
+  background-color:$white;
 }
 
 .dashboard-table td{
@@ -136,3 +143,102 @@ $white:       #FFFFFF;
 .dashboard-table tr:first-child td:last-child{
   border-width:0px 0px 1px 1px;
 }
+
+.button {
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  text-transform: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 120px; /* auto */
+  height: 35px;
+  text-align: center; /* DELETE WHEN WIDTH AUTO */
+  &.orange {
+    background: none repeat scroll 0 0 $orange;
+    color: $dark-brown;
+    &:hover {
+      background: none repeat scroll 0 0 $green;
+      color: $white;
+    }
+  }
+  &.darkbrown {
+    background: none repeat scroll 0 0 $dark-brown;
+    color: $light-brown;
+    &:hover {
+      background: none repeat scroll 0 0 $blue;
+      color: $white;
+    }
+  }
+}
+
+.button-profile {
+  float: right;
+  border: 0 none;
+  border-radius: 2px 2px 2px 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  text-transform: none;
+  margin-left: 5px;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  width: 165px; /* auto */
+  height: 35px;
+  text-align: center; /* DELETE WHEN WIDTH AUTO */
+  &.orange {
+    margin-right: 5px;
+    background: none repeat scroll 0 0 $orange;
+    color: $dark-brown;
+    &:hover {
+      background: none repeat scroll 0 0 $green;
+      color: $white;
+    }
+  }
+  &.darkbrown {
+    margin-right: 70px;
+    background: none repeat scroll 0 0 $dark-brown;
+    color: $light-brown;
+    &:hover {
+      background: none repeat scroll 0 0 $blue;
+      color: $white;
+    }
+  }
+}
+
+#profile {
+  float:left;;
+  margin-left:50px;
+  text-align:left;
+}
+
+#header-profile {
+  margin-top: 30px;
+  color: $orange;
+  font-size: 20px;
+  font-weight:bold;
+}
+
+#content-profile {
+  color: $dark-brown;
+  font-size: 30px;
+  font-weight:normal;
+}
+
+#change-password-box {
+  float: right;
+  background-color : $light-brown;
+  border :0px;
+  height : 300px;
+  width : 400px;
+} 

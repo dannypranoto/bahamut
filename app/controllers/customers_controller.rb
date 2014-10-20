@@ -1,6 +1,10 @@
 class CustomersController < ApplicationController
 	before_action :authenticate_customer!
 
+	def transaction
+
+	end
+
 	def transfer
 		if request.post?
 			transferred_email = params[:transfer][:email]
