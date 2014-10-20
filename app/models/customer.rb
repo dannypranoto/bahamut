@@ -2,7 +2,17 @@ class Customer < ActiveRecord::Base
 
   validates_uniqueness_of :username
   validates :username, length: { in: 4..20 }
-  validates :username, format: { with: /\A[a-zA-Z0-9]+\Z/ }
+  validates :username, format: { with: /\A[a-zA-Z0-9._]+\Z/ }
+
+  validates :password, length: {minimum: 8}
+
+  validate :password_complexity
+
+  def password_complexity
+    if password.present? and not password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*(_|[^\w])).+$/)
+      errors.add :password, "must include at least one lowercase letter, one uppercase letter, and one digit"
+    end
+  end
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
