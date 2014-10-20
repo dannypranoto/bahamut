@@ -49,4 +49,8 @@ class CustomersController < ApplicationController
 			redirect_to transfer_customers_path,alert: "Transfer Success!" and return
 		end
 	end
+
+	def topup
+
+	end
 end

@@ -18,6 +18,8 @@ Rails.application.routes.draw do
       get 'transaction'
       get 'transfer'
       post 'transfer'
+      get 'topup'
+      post 'topup'
     end
   end
 
