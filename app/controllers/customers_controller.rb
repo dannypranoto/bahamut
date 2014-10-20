@@ -51,6 +51,8 @@ class CustomersController < ApplicationController
 	end
 
 	def topup
-
+		if request.post?
+			topup_nominal = params[:topup][:amount].to_i
+		end
 	end
 end
