@@ -1,10 +1,8 @@
-<div id="header-wrapper">
-    <div class="title block">
-    	DASHBOARD
-    </div>
+<div id="subheader-wrapper">
+    <span class="subtitle">DASHBOARD</span>
     <div class="balance">
     	Balance<br/>
-    	<span id="currency">
+    	<span class="currency">
     		<%= number_to_currency(current_customer.balance, unit: "Rp ", separator: ",", delimiter: ".") %>
     	</span><br/>
         from the limit of 

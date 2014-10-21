@@ -1,71 +1,89 @@
-<div id="dashboard-profile-title">
-  MY PROFILE
+<div id="subheader-wrapper">
+  <span class="subtitle">MY PROFILE</span>
+  <div class="balance">
+    Balance<br/>
+        <span class="currency">
+          <%= number_to_currency(current_customer.balance, unit: "Rp ", separator: ",", delimiter: ".") %>
+        </span><br/>
+          from the limit of 
+        <% if(current_customer.status_increase_limit) %>
+            Rp 5.000.000,00
+        <% else %>
+            Rp 1.000.000,00
+        <% end %>
+  </div>
 </div>
-<%= link_to "<button class=\"button orange-profile\">close account</button>".html_safe %>
-<%= link_to "<button class=\"button lightbrown-profile\">change password</button>".html_safe %>
+
 <hr id="horizontal-line-profile" noshade size=1 width=95% />
-<div id="profile">
-  <div id="header-profile">
-    Username
+
+<div id="subcontent-wrapper">
+  <div id="profile-buttons-wrapper">
+    <%= link_to "<button class=\"button orange-profile\">close account</button>".html_safe %>
+    <%= link_to "<button class=\"button lightbrown-profile\">change password</button>".html_safe %>
   </div>
-  <div id="content-profile">
-    <%=  current_customer.username %>
+  <div id="profile-wrapper">
+    <div class="profile-header">
+      Username
+    </div>
+    <div class="profile-content">
+      <%=  current_customer.username %>
+    </div>
+    <div class="profile-header">
+      Email
+    </div>
+    <div class="profile-content">
+      <%=  current_customer.email %>
+    </div>
+    <div class="profile-header">
+      Balance
+    </div>
+    <div class="profile-content">
+      <%= number_to_currency(current_customer.balance, unit: "Rp ", separator: ",", delimiter: ".") %>
+    </div>
+    <div class="profile-header">
+      Limit Balance
+    </div>
+    <div class="profile-content">
+      <% if(current_customer.status_increase_limit) %>
+        Rp 5.000.000,00
+      <% else %>
+        Rp 1.000.000,00
+      <% end %>
+    </div>
   </div>
-  <div id="header-profile">
-    Email
+
+  <div id="profile-box-wrapper">
+    <div id="profile-box-container">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+        <div id="profile-box-form">
+          <h2>CLOSE ACCOUNT</h2>
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+          <p>
+          By closing your account, you couldn't use your account anymore next time you login. The remaining amount of your balance will be send right back to your bank account. Please complete the details below.
+          </p>
+
+          <div><%= f.label :current_password %><br />
+            <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %></div>
+
+          <div><%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+
+          <div><%= f.label :password_confirmation %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
+
+          <div class="block"><%= f.submit "Redeem & Close", class: "button darkbrown-close-account" %></div>
+          
+        <% end %>
+
+        </div>
+      </div>
   </div>
-  <div id="content-profile">
-    <%=  current_customer.email %>
-  </div>
-  <div id="header-profile">
-    Balance
-  </div>
-  <div id="content-profile">
-    <%= number_to_currency(current_customer.balance, unit: "Rp ", separator: ",", delimiter: ".") %>
-  </div>
-  <div id="header-profile">
-    Limit Balance
-  </div>
-  <div id="content-profile">
-    <% if(current_customer.status_increase_limit) %>
-      Rp 5.000.000,00
-    <% else %>
-      Rp 1.000.000,00
-    <% end %>
-  </div>
+  
 </div>
-
-<div id="close-account-box">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div id="close-account-form">
-
-    <h2 class="block">CLOSE ACCOUNT</h2>
-    
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
-
-    <p>
-    By closing your account, you couldn't use your account anymore next time you login. The remaining amount of your balance will be send right back to your bank account. Please complete the details below.
-    </p>
-
-    <div><%= f.label :current_password %><br />
-      <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %></div>
-
-    <div><%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
-
-    <div><%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
-
-    <div class="block"><%= f.submit "Redeem & Close", class: "button darkbrown-close-account" %></div>
-    
-  <% end %>
-
-  </div>
-</div>
+ 
 
 <%
 =begin 
