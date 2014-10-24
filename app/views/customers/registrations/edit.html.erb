@@ -18,8 +18,8 @@
 
 <div id="subcontent-wrapper">
   <div id="subbuttons-wrapper" class="right">
-    <%= link_to "<button class=\"button orange profile\">close account</button>".html_safe %>
-    <%= link_to "<button class=\"button lightbrown profile\">change password</button>".html_safe %>
+    <button id="close-account-button" class="button orange profile">close account</button>
+    <button id="change-password-button" class="button lightbrown profile">change password</button>
   </div>
   <div id="profile-wrapper">
     <div class="profile-header">
@@ -52,71 +52,69 @@
     </div>
   </div>
 
-  <div id="profile-box-wrapper">
-    <div id="profile-box-container">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <%= devise_error_messages! %>
-        <div id="profile-box-form">
-          <h2>CLOSE ACCOUNT</h2>
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-          <% end %>
-          <p>
-          By closing your account, you couldn't use your account anymore next time you login. The remaining amount of your balance will be send right back to your bank account. Please complete the details below.
-          </p>
+  <div class="profile-box-wrapper">
+    <div id="close-account-box" class="profile-box-container" style="display: none">
+      <%= form_tag do %>
+      <div class="profile-box-form">
+        <h2>CLOSE ACCOUNT</h2>
+        
+        <p>
+        By closing your account, you couldn't use your account anymore next time you login. The remaining amount of your balance will be send right back to your bank account. Please complete the details below.
+        </p>
 
-          <div><%= f.label :current_password %><br />
-            <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %></div>
+        <div><%= label_tag :account_bank %><br />
+        <%= text_field :account_bank,  autofocus: true ,class: "form-control"%></div>
 
-          <div><%= f.label :password %><br />
-            <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+        <div><%= label_tag :account_number %><br />
+        <%= text_field :account_number,  autofocus: true ,class: "form-control"%></div>
 
-          <div><%= f.label :password_confirmation %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
+        <div><%= label_tag :account_name %><br />
+        <%= text_field :account_name,  autofocus: true ,class: "form-control"%></div>
 
-          <div class="block"><%= f.submit "Redeem & Close", class: "button darkbrown close-account" %></div>
-          
+        <div class="block"><%= submit_tag "Redeem & Close", class: "button darkbrown close-account" %></div>
+        
+      <% end %>
+      </div>
+    </div>
+
+    <div id="change-password-box" class="profile-box-container" style="display: none"> 
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="profile-box-form">
+        <h2>CHANGE PASSWORD</h2>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
         <% end %>
 
-        </div>
+        <div><%= f.label :current_password %><br />
+          <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %></div>
+
+        <div><%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
+
+        <div><%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
+
+        <div class="block"><%= f.submit "Redeem & Close", class: "button darkbrown close-account" %></div>
+        
+      <% end %>
       </div>
+    </div>
+
   </div>
   
 </div>
- 
 
-<%
-=begin 
-%>
+<script type="text/javascript">
 
-<div id="change-password-box">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= devise_error_messages! %>
+  $( "#close-account-button" ).click(function() {
+    $( "#change-password-box" ).hide();
+    $( "#close-account-box" ).show("fast");
+  });
 
-  <div id="change-password-form">
-    
-    <h2 class="block">CHANGE PASSWORD</h2>
-    
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-    <% end %>
-
-    <div><%= f.label :current_password %><br />
-      <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %></div>
-
-    <div><%= f.label :password %><br />
-      <%= f.password_field :password, autocomplete: "off", class: "form-control" %></div>
-
-    <div><%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %></div>
-
-    <div class="block"><%= f.submit "Update", class: "button darkbrown" %></div>
-    
-  <% end %>
-
-  </div>
-</div>
-
-<%
-=end 
-%>
+  $( "#change-password-button" ).click(function() {
+    $( "#close-account-box" ).hide();
+    $( "#change-password-box" ).show("fast");
+  });
+  
+</script>

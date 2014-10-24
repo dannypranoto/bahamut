@@ -182,13 +182,13 @@ $white:        #FFFFFF;
   font-weight:normal;
 }
 
-#profile-box-wrapper {
+.profile-box-wrapper {
   float:left;
   width: 42%;
   height: auto;
 }
 
-#profile-box-container {
+.profile-box-container {
   background-color : $light-brown;
   border : 0px;
   height : auto;
@@ -198,19 +198,19 @@ $white:        #FFFFFF;
   padding: 30px 30px;
 }
 
-#profile-box-form {
+.profile-box-form {
   text-align: left;
   font-size: 18px;
   color: $dark-brown;
 }
 
-#profile-box-form h2{
+.profile-box-form h2{
   text-align: center;
   font-size: 24px;
   color: $dark-brown;
 }
 
-#profile-box-form p{
+.profile-box-form p{
   text-align: justify;
   color: $dark-brown;
 }
