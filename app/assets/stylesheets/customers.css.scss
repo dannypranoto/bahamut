@@ -8,6 +8,7 @@ $blue:         #2DB6CF;
 $green:        #46b98a;
 $white:        #FFFFFF;
 
+/* Header Style */
 #welcome-customer {
   font-size: 18px;
   color: $orange;
@@ -19,6 +20,7 @@ $white:        #FFFFFF;
   text-overflow: ellipsis;
 }
 
+/* Content Style */
 #subheader-wrapper {
   margin: 0;
   height: 80px;
@@ -55,17 +57,19 @@ $white:        #FFFFFF;
   width: 100%;
 }
 
-#horizontal-line-dashboard {
+#horizontal-line {
   float:left;
   margin-left:30px;
 }
 
-#horizontal-line-profile {
-  float:left;
-  margin-left:30px;
-  margin-top:0px;
+#subbuttons-wrapper {
+  width: auto;
+  min-height: 30px;
+  padding: 0 50px;
+  overflow: hidden;
 }
 
+/* Dashboard Section */
 .dashboard-table {
   float: left;
   margin-top:20px;
@@ -156,47 +160,7 @@ $white:        #FFFFFF;
   border-width:0px 0px 1px 1px;
 }
 
-.button {
-  border: 0 none;
-  border-radius: 2px 2px 2px 2px;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 17px;
-  font-weight: bold;
-  line-height: 20px;
-  text-transform: none;
-  margin-left: 5px;
-  margin-right: 5px;
-  transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -webkit-transition: all 0.3s ease 0s;
-  width: 120px; /* auto */
-  height: 35px;
-  text-align: center; /* DELETE WHEN WIDTH AUTO */
-  &.orange {
-    background: none repeat scroll 0 0 $orange;
-    color: $dark-brown;
-    &:hover {
-      background: none repeat scroll 0 0 $green;
-      color: $white;
-    }
-  }
-  &.darkbrown {
-    background: none repeat scroll 0 0 $dark-brown;
-    color: $light-brown;
-    &:hover {
-      background: none repeat scroll 0 0 $blue;
-      color: $white;
-    }
-  }
-}
-
 /* Profile Section */
-#profile-buttons-wrapper {
-  width: 100%;
-  height: 50px;
-}
-
 #profile-wrapper {
   float: left;
   margin-left:50px;
@@ -220,7 +184,7 @@ $white:        #FFFFFF;
 
 #profile-box-wrapper {
   float:left;
-  width: 40%;
+  width: 42%;
   height: auto;
 }
 
@@ -231,7 +195,7 @@ $white:        #FFFFFF;
   width : 350px;
   margin: 20px 0;
   float: right;
-  padding: 15px 30px;
+  padding: 30px 30px;
 }
 
 #profile-box-form {

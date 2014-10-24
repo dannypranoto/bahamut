@@ -1,7 +1,27 @@
-<%= form_tag do %>
+<div id="subheader-wrapper">
+    <span class="subtitle">TOP-UP</span>
+    <div class="balance">
+    	Balance<br/>
+    	<span class="currency">
+    		<%= number_to_currency(current_customer.balance, unit: "Rp ", separator: ",", delimiter: ".") %>
+    	</span><br/>
+        from the limit of 
+    	<% if(current_customer.status_increase_limit) %>
+      		Rp 5.000.000,00
+    	<% else %>
+        	Rp 1.000.000,00
+    	<% end %>
+    </div>
+</div>
 
-  <div><%= label_tag :Top_Up_Amount %><br />
-  <%= text_field :topup, :amount %></div>
+<hr id="horizontal-line" noshade size=1 width=95% />
 
-  <div><%= submit_tag "CONFIRM TOP-UP" %></div>
-<% end %>
+<div id="subcontent-wrapper">
+	<%= form_tag do %>
+
+	  <div><%= label_tag :Top_Up_Amount %><br />
+	  <%= text_field :topup, :amount %></div>
+
+	  <div><%= submit_tag "CONFIRM TOP-UP" %></div>
+	<% end %>
+</div>

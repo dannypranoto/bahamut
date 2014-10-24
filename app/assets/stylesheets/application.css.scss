@@ -71,7 +71,7 @@ header {
 
 .menu-wrapper ul{
   list-style: none;
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 0px;
 }
 
@@ -130,6 +130,10 @@ footer {
   vertical-align: middle;
 }
 
+.right {
+  text-align: right;
+}
+
 /* Button Style */
 .button {
   border: 0 none;
@@ -146,9 +150,9 @@ footer {
   -moz-transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
   text-align: center;
+  width: 115px;
+  height: 35px;
   &.orange {
-    width: 120px;
-    height: 35px;
     background: none repeat scroll 0 0 $orange;
     color: $dark-brown;
     &:hover {
@@ -157,32 +161,19 @@ footer {
     }
   }
   &.darkbrown {
-    width: 120px;
-    height: 35px;
     background: none repeat scroll 0 0 $dark-brown;
     color: $light-brown;
+    &.close-account {
+      width: 165px;
+      height: 35px;
+      margin-top: 10px;
+    }
     &:hover {
       background: none repeat scroll 0 0 $blue;
       color: $white;
     }
   }
-  &.orange-profile {
-    width: 165px;
-    height: 35px;
-    float: right;
-    margin-right: 70px;  
-    background: none repeat scroll 0 0 $orange;
-    color: $dark-brown;
-    &:hover {
-      background: none repeat scroll 0 0 $green;
-      color: $white;
-    }
-  }
-  &.lightbrown-profile {
-    width: 165px;
-    height: 35px;
-    float: right;
-    margin-right: 5px;
+  &.lightbrown {  
     background: none repeat scroll 0 0 $light-brown;
     color: $dark-brown;
     &:hover {
@@ -190,15 +181,11 @@ footer {
       color: $white;
     }
   }
-  &.darkbrown-close-account {
+  &.dashboard {
+    width: 200px;
+    margin: 0 90px;
+  }
+  &.profile {
     width: 165px;
-    height: 35px;
-    margin-top: 10px;
-    background: none repeat scroll 0 0 $dark-brown;
-    color: $light-brown;
-    &:hover {
-      background: none repeat scroll 0 0 $blue;
-      color: $white;
-    }
   }
 }
